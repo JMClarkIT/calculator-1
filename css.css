@@ -1,0 +1,103 @@
+#clear { grid-area: clear; }
+#clearEntry { grid-area: clearEntry; }
+#backspace { grid-area: backspace; }
+#seven { grid-area: seven; }
+#eight { grid-area: eight; }
+#nine { grid-area: nine; }
+#divide { grid-area: divide; }
+#four { grid-area: four; }
+#five { grid-area: five; }
+#six { grid-area: six }
+#multiply { grid-area: multiply; }
+#one { grid-area: one; }
+#two { grid-area: two; }
+#three { grid-area: three; }
+#subtract { grid-area: subtract; }
+#zero { grid-area: zero; }
+#decimal { grid-area: decimal; }
+#equals { grid-area: equals; }
+#add { grid-area: add; }
+
+body {
+    background-color: rgb(204, 218, 222);
+    font-family: Roboto, sans-serif;
+}
+#header {
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 38pt;
+    text-align: center;
+    margin: 50px auto 50px auto;
+}
+#container {
+    background-color: rgb(4, 46, 94);
+    display: grid;
+    margin: 25px auto auto auto;
+    border: 1px solid white;
+    border-radius: 10px;
+    max-width: 360px;
+    height: 560px;
+    padding: 10px 5px 10px 5px;
+}
+#display {
+    margin: 5px 5px 15px 5px;
+    background-color: rgb(224, 224, 224);
+    height: 80px;
+    border-radius: 5px;
+}
+#buttons {
+    display: grid;
+    grid-template-columns: 90px 90px 90px 90px;
+    grid-template-rows: 90px 90px 90px 90px 90px; 
+    grid-template-areas: 
+        'clear clear clearEntry backspace'
+        'seven eight nine divide'
+        'four five six multiply'
+        'one two three subtract'
+        'zero decimal equals add';
+    height: 500px;
+}
+div[type="button"] {
+    width: auto;
+    margin: 5px 5px 5px 5px;
+    background-color: rgb(173, 173, 173);
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 0px;
+    font-size: 20pt;
+}
+#working {
+    text-align: left;
+    font-size: small;
+    padding-left: 10px;
+    height: 25px;
+    display: none;
+}
+#bigNumbers {
+    text-align: right;
+    font-size: 32pt;
+    padding: 20px 10px 0px 10px;
+}
+#multiply, #subtract, #add, #divide, #equals {
+    background-color: rgb(185, 169, 126);
+}
+#clear, #clearEntry, #backspace {
+    background-color: rgb(216, 215, 135);
+}
+div[type="button"]:hover {
+    box-shadow: 3px 3px 3px 3px #000000
+}
+.number:hover, #decimal:hover {
+    background-color: rgb(204, 204, 204);
+}
+#multiply:hover, #subtract:hover, #add:hover, #divide:hover, #equals.hover {
+    background-color: rgb(214, 200, 161);
+}
+#clear:hover, #clearEntry:hover, #backspace:hover {
+    background-color: rgb(214, 205, 141);
+}
+div[type="button"]:active {
+    box-shadow: 1px 1px 3px 3px #000000;
+    transform: translateY(3px);
+}
